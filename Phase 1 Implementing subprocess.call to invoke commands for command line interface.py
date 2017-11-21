@@ -1,5 +1,4 @@
-Source Code for Project 1 phase 2 
-Import os
+import os
 import stat
 import time
 import subprocess
