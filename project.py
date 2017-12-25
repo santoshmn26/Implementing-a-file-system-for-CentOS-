@@ -4,7 +4,18 @@ import datetime
 import time
 import os
 import math	
-
+############################################
+In [2]: #Classes used 
+	# 1. database used to store all the information about the file such as 
+		1. filename
+		2. size of file
+		3. start number of the block
+		4. Ending number of the block
+		5. total number of blocks
+		6. The FCB number
+		7. Number of available blocks in the FCB
+		8. FCB file number
+############################################
 class database():
 	def __init__(self):
 		self.file_name=''
@@ -13,16 +24,22 @@ class database():
 		self.end_block=''
 		self.number_blocks=None
 		self.pos=''
-		self.no_of_lines=None
 		self.fcb=[]
 		self.start=None
 		self.end=None
-		self.eof=None
 		self.database=[]
 		self.update_flag=0
 		self.availblock=0
 		self.pfs_file=''
-
+In [3]: # Functions used in this class
+		1. update_fcb_block: Check the existing FCB if the file was altered update the FCB.
+		2. Awesome_logic: Function used to create new FCB (PFS) file
+		3. add_details: The main function where the details are stored in variable.
+		4. save_details: The function where details are stored in the file 'database.txt'
+		5. check_space: checking if there are any blocks free in the current FCB
+		6. write_details: Adds the content of the input file to the FCB file
+		7. show_dir: function used to handle the dir cmd
+		8. remove_file: function used to handle r cmd
 	def update_fcb_block(self):
 		check_string="EOF\n"
 		d=open("database.txt",'r')
