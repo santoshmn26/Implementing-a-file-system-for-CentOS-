@@ -5,7 +5,8 @@ import time
 import os
 import math	
 ############################################
-In [2]: ```#Classes used 
+```
+In [2]: #Classes used 
 	# 1. database used to store all the information about the file such as 
 		1. filename
 		2. size of file
@@ -14,7 +15,8 @@ In [2]: ```#Classes used
 		5. total number of blocks
 		6. The FCB number
 		7. Number of available blocks in the FCB
-		8. FCB file number```
+		8. FCB file number
+```
 ############################################
 class database():
 	def __init__(self):
