@@ -35,7 +35,7 @@ class database():
 		self.update_flag=0
 		self.availblock=0
 		self.pfs_file=''
-#######################################################
+##############################################################################################################
 In [3]: # Functions used in this class
 		1. update_fcb_block: Check the existing FCB if the file was altered update the FCB.
 		2. Awesome_logic: Function used to create new FCB (PFS) file
@@ -45,7 +45,12 @@ In [3]: # Functions used in this class
 		6. write_details: Adds the content of the input file to the FCB file
 		7. show_dir: function used to handle the dir cmd
 		8. remove_file: function used to handle r cmd
-########################################################
+		9. kill_all: function used to kill the currend FCB
+		10. run_vi: function used to a vi editor with the specified file name
+		11. copy_file: function used to copy the contents of the selected file
+		12. append_newdata: function used to append new data into the FCB file of the selected file
+		13. append_remarks: function used to append remarks to a file
+###############################################################################################################
 	def update_fcb_block(self):
 		check_string="EOF\n"
 		d=open("database.txt",'r')
