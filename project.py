@@ -63,6 +63,7 @@ In [3]: # Functions used in this class
 						line=data
 						f.write(line)
 				f.write(line) 
+###############################################################################################################				
 	def awesome_logic(self,req_block):
 		for i in range(1,4):
 			file1="fcb_"+str(i)+".txt"
@@ -75,6 +76,7 @@ In [3]: # Functions used in this class
 				break
 		self.start_block=1
 		self.end_block=self.start_block+req_block-1
+###############################################################################################################
 	def check_space(self,aspace):
 		o=open("database.txt",'r')
 		lines=o.readlines()
@@ -136,9 +138,7 @@ In [3]: # Functions used in this class
 				self.end_block=e1-1
 			return(1)			
 		return(0)		
-
-			
-				
+###############################################################################################################				
 	def add_details(self,fileName,curblock,availblock,pfs_file):
 		o=open("database.txt","r")
 		lines=o.readlines()
@@ -178,6 +178,7 @@ In [3]: # Functions used in this class
 			self.availblock=self.availblock-self.number_blocks
 		self.save_details()
 		self.write_details()
+###############################################################################################################		
 	def update_changes(self):
 		check_string=self.file_name
 		with open("database.txt",'r+') as k:
@@ -193,6 +194,7 @@ In [3]: # Functions used in this class
 				f.write(str(data))
 				f.write("\t")
 			f.write("\n")
+###############################################################################################################			
 	def save_details(self):
 		self.database=[]
 		self.database.append(str(self.file_name))	#0
@@ -250,8 +252,7 @@ In [3]: # Functions used in this class
 				else:
 					d.write(line)
 			d.close()
-			
-
+###############################################################################################################
 	def write_details(self,x=' '):
 		if(x!=' '):
 			file_name=x
@@ -272,8 +273,7 @@ In [3]: # Functions used in this class
 				o.write(line)
 			for i in range(size,10240):
 				o.write("\0")
-	def update_file_size(self,x):
-		self.write_details(x)
+###############################################################################################################				
 	def show_dir(self):
 		o=open("database.txt",'r')
 		temp=''
@@ -294,7 +294,7 @@ In [3]: # Functions used in this class
 					print(line[0],"\t",line[1]," bytes\t",line[9])
 				
 		o.close()
-
+###############################################################################################################		
 	def remove_file(self,filename):
 		found=0
 		o=open("database.txt",'r+')
@@ -366,6 +366,7 @@ In [3]: # Functions used in this class
 			else:
 				f.write(line)
 		f.close()
+###############################################################################################################		
 	def kill_all(self,filename):
 		f=open("database.txt",'r')
 		lines=f.readlines()
@@ -388,6 +389,7 @@ In [3]: # Functions used in this class
 		o=open("database.txt",'w')
 		o.write("database\t1\t39\t\nfreespace\t\n")
 		o.close()
+###############################################################################################################		
 	def copy_file(self,filename):
 		path="/home/santoshmn26/Project/"+filename
 		f=open("database.txt",'r')
@@ -492,6 +494,7 @@ In [3]: # Functions used in this class
 		for i in range(size,10240):
 			o.write("\n")
 		o.close()
+###############################################################################################################		
 	def append_remarks(self,filename,remarks):
 		remarks_string=''
 		for i in remarks:
