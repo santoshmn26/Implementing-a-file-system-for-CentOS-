@@ -2,9 +2,9 @@
 Implementing a file system in CentOS using python.
 
 This project contains 3 files 
-  1. Phase1: Simple project to execute shell commands using python.
-  2. Phase2: Use Phase1 and Subprocess.call function to invoke Fork() and execvp().
-  3. Phase3: Create a complete FCB file control block to manage files.
+ 1. Phase1: Simple project to execute shell commands using python.
+ 2. Phase2: Use Phase1 and Subprocess.call function to invoke Fork() and execvp().
+ 3. Phase3: Create a complete FCB file control block to manage files.
 
 Phase-3 Creates a FCB that can manipulate file and execute commands on files such as
   1. put: insert a file into FCB
