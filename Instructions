@@ -1,0 +1,9 @@
+Assumptions about the project:
+1.	A file more than 10 KB will not be added to the PFS file.
+2.	More than one PFS file can exist.
+3.	All the comments are case sensitive.
+4.	Comments added to the text file with putr is not appended in the PFS file.
+5.	Comments are just displayed with the dir command.
+6.	Run commands used only for vi.
+7.	Run command with a text file and vi.
+8.	Appending additional strings to pfs file.
