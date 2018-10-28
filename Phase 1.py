@@ -39,7 +39,7 @@ while(should_run):
                                 var.append(list_cmd[choice-1])
                                 x=subprocess.Popen(var)
                                 time.sleep(1)
-		   		x.terminate()
+		   		 x.terminate()
                         else:
                                 var='./' + list_cmd[choice-1]           # handling .out files that are executable
                                 subprocess.call(var)                    # calling subprocess to execute the command
